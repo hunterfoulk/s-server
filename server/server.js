@@ -288,5 +288,5 @@ app.get('/search', async (req, res, next) => {
   }
 
 });
-
-server.listen(PORT || 8000, () => console.log(`Server started on port: ${PORT}`));
+const host = '0.0.0.0';
+server.listen(8000, () => console.log(`Server started on port: ${PORT}`));

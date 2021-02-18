@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 8000;
 // var whitelist = ["http://localhost:3000", "https://springboard-server.herokuapp.com", "https://dashboard.heroku.com"];
 const short = require('short-uuid');
 require("dotenv").config();
+const cors = require("cors");
+
+
 
 // app.use(cors(corsOptions(whitelist)), (req, res, next) => {
 //   console.log("cors fired");
@@ -21,7 +24,7 @@ require("dotenv").config();
 // });
 
 app.use(express.json());
-
+app.use(cors());
 
 var knex = require('knex')({
   client: 'pg',

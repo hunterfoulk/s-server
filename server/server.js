@@ -289,4 +289,4 @@ app.get('/search', async (req, res, next) => {
 
 });
 const host = '0.0.0.0';
-server.listen(8000, () => console.log(`Server started on port: ${PORT}`));
+server.listen(process.env.PORT || 5000, () => console.log(`Server started on port: ${PORT}`));

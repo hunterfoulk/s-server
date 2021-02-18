@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.13",
+    "nodemon": "^2.0.6",
+    "pg": "^8.5.1",
+    "short-uuid": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.13",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
 const PORT = 8000;
-const pool = require("./pg");
 const { cors, corsOptions } = require("./cors");
 var whitelist = ["http://localhost:3000"];
 const short = require('short-uuid');

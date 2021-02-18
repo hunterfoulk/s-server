@@ -2,23 +2,23 @@ const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
 const PORT = process.env.PORT || 8000;
-const { cors, corsOptions } = require("./cors");
-var whitelist = ["http://localhost:3000", "https://springboard-server.herokuapp.com", "https://dashboard.heroku.com"];
+// const { cors, corsOptions } = require("./cors");
+// var whitelist = ["http://localhost:3000", "https://springboard-server.herokuapp.com", "https://dashboard.heroku.com"];
 const short = require('short-uuid');
 require("dotenv").config();
 
-app.use(cors(corsOptions(whitelist)), (req, res, next) => {
-  console.log("cors fired");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  if (req.method === "OPTIONS") {
-    res.header("Access-Control-Allow-Methods", "GET, PUT, POST, PATCH, DELETE");
-    return res.status(200).json({});
-  }
-  next();
-});
+// app.use(cors(corsOptions(whitelist)), (req, res, next) => {
+//   console.log("cors fired");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   if (req.method === "OPTIONS") {
+//     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, PATCH, DELETE");
+//     return res.status(200).json({});
+//   }
+//   next();
+// });
 
 app.use(express.json());
 

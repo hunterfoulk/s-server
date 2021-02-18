@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const server = require('http').createServer(app);
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const { cors, corsOptions } = require("./cors");
 var whitelist = ["http://localhost:3000", "https://springboard-server.herokuapp.com"];
 const short = require('short-uuid');
@@ -289,4 +289,4 @@ app.get('/search', async (req, res, next) => {
 
 });
 const host = '0.0.0.0';
-server.listen(process.env.PORT || 5000, () => console.log(`Server started on port: ${process.env.PORT}`));
+server.listen(PORT, () => console.log(`Server started on port: ${process.env.PORT}`));

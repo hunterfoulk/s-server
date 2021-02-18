@@ -3,7 +3,7 @@ const app = express();
 const server = require('http').createServer(app);
 const PORT = process.env.PORT || 8000;
 const { cors, corsOptions } = require("./cors");
-var whitelist = ["http://localhost:3000", "https://springboard-server.herokuapp.com"];
+var whitelist = ["http://localhost:3000", "https://springboard-server.herokuapp.com", "https://dashboard.heroku.com"];
 const short = require('short-uuid');
 require("dotenv").config();
 
